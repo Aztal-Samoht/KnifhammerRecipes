@@ -7,6 +7,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenBase();
+    return ScreenBase(
+      appbar: AppBar(
+        title: Text('Knifehammer Recipe app'),
+      ),
+      child: Column(
+        children: [],
+      ),
+    );
   }
 }
