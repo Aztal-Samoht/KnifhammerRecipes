@@ -3,10 +3,10 @@ import 'package:knifehammer_recipes/ads.dart';
 
 class ScreenBase extends StatelessWidget {
   const ScreenBase(
-      {Key? key, this.child, this.appbar, this.floatingActionButton, this.noAd})
+      {Key? key, this.body, this.appbar, this.floatingActionButton, this.noAd})
       : super(key: key);
   final bool? noAd;
-  final Widget? child;
+  final Widget? body;
   final AppBar? appbar;
   final FloatingActionButton? floatingActionButton;
 
@@ -18,7 +18,7 @@ class ScreenBase extends StatelessWidget {
               appBar: appbar ?? AppBar(title: Text(runtimeType.toString())),
               body: Stack(
                 children: [
-                  child ?? const Placeholder(),
+                  body ?? const Placeholder(),
                   const MyBannerAd(),
                 ],
               ),
@@ -30,7 +30,7 @@ class ScreenBase extends StatelessWidget {
               floatingActionButton: floatingActionButton,
               body: Stack(
                 children: [
-                  child ?? const Placeholder(),
+                  body ?? const Placeholder(),
                   const MyBannerAd(),
                 ],
               ),
