@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "493742930755",
+    "project_id": "knifehamer-recipes",
+    "storage_bucket": "knifehamer-recipes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493742930755:android:822b06cace2756d56b4df6",
+        "android_client_info": {
+          "package_name": "com.aztal_appsprojectname.knifehammer_recipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493742930755-htbh83lpv7psmfms0e23d5dmjr067u1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbUWieK2ewdKJw9ApWkyBHo2HQLrWg7F0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493742930755-htbh83lpv7psmfms0e23d5dmjr067u1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,11 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:knifehammer_recipes/res/recipe_util.dart';
-import 'package:knifehammer_recipes/res/widget_tree.dart';
+import 'package:knifehammer_recipes/screens/home_screen.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+  await Firebase.initializeApp();
   MobileAds.instance.initialize();
 
   runApp(const MyApp());
@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: RecipeUtil.getThemeData(),
-      // routes: RecipeUtil.getRoutes(),
-      // initialRoute: HomeScreen.id,
-      home: const WidgetTree(),
+      routes: RecipeUtil.getRoutes(),
+      initialRoute: HomeScreen.id,
+      // home: const WidgetTree(),
     );
   }
 }

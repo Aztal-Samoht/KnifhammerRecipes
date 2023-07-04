@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 class Auth {
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  User? get currentUser => _firebaseAuth.currentUser;
+  static final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  static User? get currentUser => _firebaseAuth.currentUser;
   Stream<User?> get authStateChanges => _firebaseAuth.authStateChanges();
 
   Future<void> signInWithEmailAndPassword({
@@ -25,7 +26,12 @@ class Auth {
     );
   }
 
-  Future<void> signOut() async {
+  static Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
+
+  static Widget signOutButton() => const ElevatedButton(
+        onPressed: signOut,
+        child: Text('sign out'),
+      );
 }

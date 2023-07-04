@@ -8,14 +8,9 @@ class HomeScreen extends StatelessWidget {
   static String id = 'home';
   HomeScreen({Key? key}) : super(key: key);
 
-  final User? user = Auth().currentUser;
-  Future<void> signOut() async => await Auth().signOut();
+  final User? user = Auth.currentUser;
 
   Widget _userUid() => Text(user?.email ?? 'user email');
-  Widget _signOutButton() => ElevatedButton(
-        onPressed: signOut,
-        child: const Text('sign out'),
-      );
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +23,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _userUid(),
-            _signOutButton(),
+            Auth.signOutButton(),
             OutlinedButton(
               onPressed: () => Navigator.pushNamed(context, LoginScreen.id),
               child: Text('to Login Screen'),

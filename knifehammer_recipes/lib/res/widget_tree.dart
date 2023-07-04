@@ -4,6 +4,7 @@ import 'package:knifehammer_recipes/screens/home_screen.dart';
 import 'package:knifehammer_recipes/screens/login_register_screen.dart';
 
 class WidgetTree extends StatefulWidget {
+  static String id = 'tree';
   const WidgetTree({super.key});
 
   @override
