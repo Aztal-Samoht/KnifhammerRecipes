@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:knifehammer_recipes/res/auth.dart';
-import 'package:knifehammer_recipes/screens/login_register_screen.dart';
+import 'package:knifehammer_recipes/widgets/buttons.dart';
 import 'package:knifehammer_recipes/widgets/screen_base.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,10 +24,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             _userUid(),
             Auth.signOutButton(),
-            OutlinedButton(
-              onPressed: () => Navigator.pushNamed(context, LoginScreen.id),
-              child: Text('to Login Screen'),
-            ),
+            toLogin(context),
           ],
         ),
       ),

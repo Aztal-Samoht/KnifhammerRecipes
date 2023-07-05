@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:knifehammer_recipes/res/recipe_util.dart';
-import 'package:knifehammer_recipes/screens/home_screen.dart';
+import 'package:knifehammer_recipes/res/widget_tree.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: RecipeUtil.getThemeData(),
       routes: RecipeUtil.getRoutes(),
-      initialRoute: HomeScreen.id,
+      initialRoute: WidgetTree.id,
       // home: const WidgetTree(),
     );
   }

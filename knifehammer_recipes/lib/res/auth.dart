@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+//TODO: finish making this static
 class Auth {
   static final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   static User? get currentUser => _firebaseAuth.currentUser;
